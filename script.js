@@ -1,5 +1,5 @@
 function navanimation(){
-    let navmainHeading = document.querySelectorAll(".nav-mainHeading")
+let navmainHeading = document.querySelectorAll(".nav-mainHeading")
 let nav = document.querySelector("nav")
 navmainHeading.forEach((h4)=>{
 h4.addEventListener("mouseenter",()=>{
@@ -37,3 +37,29 @@ nav.addEventListener("mouseleave",()=>{
 })
 }
 navanimation()
+
+function page2Animation(){
+    let rightElems = document.querySelectorAll(".right-elem")
+
+rightElems.forEach((elems)=>{
+    elems.addEventListener("mouseenter",()=>{
+        gsap.to(elems.childNodes[3],{
+            opacity:1,
+            scale:1
+        })
+    })
+    elems.addEventListener("mouseleave",()=>{
+        gsap.to(elems.childNodes[3],{
+            opacity:0,
+            scale:0
+        })
+    })
+    elems.addEventListener("mousemove",(dets)=>{
+      gsap.to(elems.childNodes[3],{
+        x:dets.x - elems.getBoundingClientRect().x - 50,
+        y:dets.y - elems.getBoundingClientRect().y-160
+      })
+    })
+})
+}
+page2Animation()
