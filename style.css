@@ -12,21 +12,81 @@ html,body{
 nav{
     position: fixed;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
+    height: 12vh;
     padding: 2vw 10.4vw;
     justify-content: space-between;
-    
+    /* background-color: #0DA34E; */
 }
 .nav-part2{
     display: flex;
     gap: 2vw;
 }
+.nav-part2{
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-part2 h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav-part2 h5 span{
+    font-size: 0.77vw;
+    font-weight: 400;
+    transform: translateY(25px);
+    display: inline-block;
+}
 .nav-part2 h4{
-    font-size: 0.75vw;
+    font-size: 0.73vw;
     font-weight: 600;
     text-transform: uppercase;
-    
+    margin-bottom: 2.6vw;
+    cursor: default;
+}
+.nav-part2 h4:hover{
+    opacity: 0.5;
+}
+#nav-bottom{
+    height: 0vh;
+    width: 79%;
+    position: absolute;
+    top: 100%;
+    z-index: 9;
+    border-bottom: 1px solid #fff ;
+    background-color: #111;
+}
+
+.bottom-div{
+    margin-top: 2vw;
+}
+.bottom-div h5{
+    margin-bottom: 0.4vw;
+}
+.bottom-div h5 span{
+    font-weight: 500;
+    font-size: 0.75vw;
+    display: inline-block;
+    opacity: 0;
+}
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.85vw;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+nav button svg{
+    height: 0.85vw;
+    margin-left: 1.6vw;
 }
 #page1{
     height: 100vh;
