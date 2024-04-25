@@ -39,7 +39,7 @@ nav.addEventListener("mouseleave",()=>{
 navanimation()
 
 function page2Animation(){
-    let rightElems = document.querySelectorAll(".right-elem")
+let rightElems = document.querySelectorAll(".right-elem")
 
 rightElems.forEach((elems)=>{
     elems.addEventListener("mouseenter",()=>{
@@ -63,3 +63,27 @@ rightElems.forEach((elems)=>{
 })
 }
 page2Animation()
+
+function page3VideoAnimation(){
+    let page3Center = document.querySelector(".page3-center")
+let video = document.querySelector("#page3 video")
+
+page3Center.addEventListener("click",()=>{
+    video.play()
+    gsap.to(video,{
+        transform:"scaleX(1) scaleY(1)",
+        opacity:1,
+        borderRadius:0
+    })
+})
+video.addEventListener("click",()=>{
+    video.pause()
+    gsap.to(video,{
+        transform:"scaleX(0.7) scaleY(0)",
+        opacity:0,
+        borderRadius:"30px"
+    })
+})
+}
+page3VideoAnimation()
+
