@@ -87,3 +87,19 @@ video.addEventListener("click",()=>{
 }
 page3VideoAnimation()
 
+function page4Animation(){
+    let sections = document.querySelectorAll(".sec-right")
+sections.forEach((elem)=>{
+    // console.log(elem.childNodes[2]);
+    elem.addEventListener("mouseenter",()=>{
+        elem.childNodes[3].style.opacity = 1
+        elem.childNodes[3].play()
+    })
+    elem.addEventListener("mouseleave",()=>{
+        elem.childNodes[3].style.opacity = 1
+        elem.childNodes[3].load()
+    })
+})
+}
+page4Animation()
+
