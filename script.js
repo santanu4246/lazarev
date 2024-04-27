@@ -56,8 +56,8 @@ rightElems.forEach((elems)=>{
     })
     elems.addEventListener("mousemove",(dets)=>{
       gsap.to(elems.childNodes[3],{
-        x:dets.x - elems.getBoundingClientRect().x - 50,
-        y:dets.y - elems.getBoundingClientRect().y-160
+        x:dets.x - elems.getBoundingClientRect().x - 60,
+        y:dets.y - elems.getBoundingClientRect().y-100
       })
     })
 })
@@ -109,14 +109,13 @@ function page5Animation() {
     page5right.forEach((elem) => {
         let video = elem.childNodes[7];
         elem.addEventListener("mouseenter", () => {
-            gsap.to(video, { opacity: 1, height: "75%", duration: 0.3, ease: "power2.inOut" });
+            gsap.to(video, { opacity: 1, height: "75%", duration: 0.4, ease: "power2.inOut" });
             video.play();
         });
 
         elem.addEventListener("mouseleave", () => {
-            gsap.to(video, { opacity: 0, height: "50%", duration: 0.3, ease: "power2.inOut", onComplete: () => video.load() });
+            gsap.to(video, { opacity: 0, height: "50%", duration: 0.4, ease: "power2.inOut", onComplete: () => video.load() });
         });
     });
 }
-
 page5Animation();

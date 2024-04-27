@@ -254,7 +254,7 @@ nav button svg {
     position: relative;
     padding-top: 2vw;
     /* background-color: red; */
-    padding-bottom: 5vw;
+    padding-bottom: 2vw;
     border-bottom: 1px solid #333;
 }
 
@@ -265,7 +265,9 @@ nav button svg {
 .right-elem h2 {
     font-size: 1.4vw;
     font-weight: 400;
-    z-index: -1;
+    position: absolute;
+    z-index: 100;
+    cursor: default;
 }
 
 .right-elem img {
@@ -273,7 +275,7 @@ nav button svg {
     width: 7vw;
     border-radius: 50%;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     opacity: 0;
     scale: 0;
 }
