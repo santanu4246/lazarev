@@ -119,8 +119,21 @@ function page5Animation() {
 }
 page5Animation()
 
-
-
+function page7Animation(){
+    gsap.from("#btm6-part2 h4",{
+        x:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:"#btm6-part2",
+            scroller:"body",
+            // markers:true,
+            start:"top 80%",
+            end:"top 10%",
+            scrub:true
+        }
+    })
+}
+page7Animation()
 
 
 
