@@ -25,7 +25,7 @@ nav {
     height: 12vh;
     padding: 2vw 10.4vw;
     justify-content: space-between;
-    z-index: 1001;
+    z-index: 100;
     background-color: #111;
     /* background-color: #0DA34E; */
 }
